@@ -183,7 +183,7 @@
 						"priority": 1400,
 						"sourceAddressPrefix": "*",
 						"protocol": "TCP",
-						"destinationPortRange": "5349 ",
+						"destinationPortRange": "5349",
 						"access": "Allow",
 						"direction": "Inbound",
 						"sourcePortRange": "*",
@@ -196,7 +196,7 @@
 						"priority": 1500,
 						"sourceAddressPrefix": "*",
 						"protocol": "UDP",
-						"destinationPortRange": "10000 ",
+						"destinationPortRange": "10000",
 						"access": "Allow",
 						"direction": "Inbound",
 						"sourcePortRange": "*",
@@ -267,8 +267,8 @@
 			"typeHandlerVersion": "2.0",
 			"autoUpgradeMinorVersion": true,
 			"settings": {
-				"fileUris": "[split('https://raw.githubusercontent.com/theonemule/simple-jitsi-server/master/jitsi.sh', ' ')]",
-				"commandToExecute": "[concat('bash jitsi.sh --hostname=', parameters('dnsNameForPublicIP'), '.', resourceGroup().location, '.cloudapp.azure.com --password=', parameters('adminPassword'), ' --username=', parameters('adminUsername'), ' --email=',  parameters('sslEmail'))]"
+				"fileUris": "[split('https://raw.githubusercontent.com/theonemule/jitsi-install/main/install.sh', ' ')]",
+				"commandToExecute": "[concat('bash install.sh --hostname=', parameters('dnsNameForPublicIP'), '.', resourceGroup().location, '.cloudapp.azure.com --password=', parameters('adminPassword'), ' --username=', parameters('adminUsername'), ' --email=',  parameters('sslEmail'))]"
 			}
 		}
 	}	
