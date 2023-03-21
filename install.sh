@@ -72,6 +72,6 @@ sed -i "s/\/\/ anonymousdomain: 'guest.example.com',/anonymousdomain: 'guest.$HO
 
 echo "org.jitsi.jicofo.auth.URL=XMPP:$HOSTNAME" >  /etc/jitsi/jicofo/sip-communicator.properties
 
-eval "prosodyctl register $USERNAME $HOSTNAME $PASSWORD"
+prosodyctl register $USERNAME $HOSTNAME $PASSWORD
 
 systemctl restart prosody.service jicofo.service jitsi-videobridge2.service
