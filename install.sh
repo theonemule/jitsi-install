@@ -47,7 +47,7 @@ apt update
 debconf-set-selections <<< "jicofo jitsi-videobridge/jvb-hostname string $HOSTNAME"
 debconf-set-selections <<< "jitsi-meet-web-config jitsi-meet/cert-choice select Generate a new self-signed certificate (You will later get a chance to obtain a Let's encrypt certificate)"
 
-apt install -y apt jitsi-meet certbot	
+apt install -y jitsi-meet certbot	
 
 echo "$EMAIL" | /usr/share/jitsi-meet/scripts/install-letsencrypt-cert.sh
 
