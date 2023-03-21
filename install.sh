@@ -42,12 +42,12 @@ gpg --output /usr/share/keyrings/prosody-keyring.gpg --dearmor prosody-debian-pa
 rm prosody-debian-packages.key
 echo "deb [signed-by=/usr/share/keyrings/prosody-keyring.gpg] http://packages.prosody.im/debian jammy main" > /etc/apt/sources.list.d/prosody.list
 
-apt update
+apt-get update
 
 debconf-set-selections <<< "jicofo jitsi-videobridge/jvb-hostname string $HOSTNAME"
 debconf-set-selections <<< "jitsi-meet-web-config jitsi-meet/cert-choice select Generate a new self-signed certificate (You will later get a chance to obtain a Let's encrypt certificate)"
 
-apt install -y jitsi-meet certbot	
+apt-get install -y jitsi-meet certbot	
 
 echo "$EMAIL" | /usr/share/jitsi-meet/scripts/install-letsencrypt-cert.sh
 
