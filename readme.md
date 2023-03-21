@@ -4,6 +4,8 @@ When Zoom became a household word in the early days of the Covid-19 pandemic, it
 
 Setting up Jitsi on Azure is straightforward if you want to copy and paste a bunch of commands into a Ubuntu machine terminal. There are a ton of guides on how to do this, but I figured I would just automate it the process. You can click the link below, fill out a form, and deploy your instance of Jitsi to an Azure VM. Once there, you can use a browser or a mobile app to create or connect to meetings. It’s that easy.
 
+<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Ftheonemule%2Fjitsi-install%2Fmain%2Ftemplate.json" target="_blank"><img src="http://azuredeploy.net/deploybutton.png"/></a>
+
 If you want to use the install script off Azure, it’s pretty simple, too. Download the script and run it on an Ubuntu 22.04 VM on any other cloud or on-premise if you want to do that. You’ll need an FQDN for the VM’s public IP and the following ports on the firewall open: TCP/22, TCP/80, TCP/443, UDP/3478, TCP/5349, and UDP/10000
 
 ```
